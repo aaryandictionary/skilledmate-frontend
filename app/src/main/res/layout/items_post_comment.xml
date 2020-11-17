@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circularImgUser"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@color/colorGreen"></de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/txtUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aryan Raj"
+        android:layout_toRightOf="@id/circularImgUser"
+        android:layout_marginStart="8dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/txtComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtUserName"
+        android:layout_toRightOf="@id/circularImgUser"
+        android:layout_marginStart="8dp"
+        android:text="This is a test comment jus tot test if it is working
+well and tod fkd eed saa  wr gfdsertg fd s df gmd
+fjmfe kd dek dek"
+        android:layout_marginTop="4dp"></TextView>
+
+    <TextView
+        android:id="@+id/txtCommentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:00 PM"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/txtComment"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="4dp"></TextView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+</RelativeLayout>

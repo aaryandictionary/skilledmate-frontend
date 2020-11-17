@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Course Content"
+            android:textStyle="bold"
+            android:layout_margin="10dp"></TextView>
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tT"
+            android:background="@color/colorGrayLight"></View>
+
+
+        <EditText
+            android:id="@+id/textContentTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@id/view"
+            android:background="@drawable/bg_edittext_gray"
+            android:hint="Content Title"
+            android:layout_marginTop="20dp"
+            android:padding="14dp"></EditText>
+
+        <EditText
+            android:id="@+id/textContentDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@id/textContentTitle"
+            android:background="@drawable/bg_edittext_gray"
+            android:hint="Content Duration"
+            android:layout_marginTop="20dp"
+            android:padding="14dp"></EditText>
+
+        <EditText
+            android:id="@+id/textContentDescription"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="start"
+            android:layout_below="@id/textContentDuration"
+            android:background="@drawable/bg_edittext_gray"
+            android:hint="Content Title"
+            android:layout_marginTop="20dp"
+            android:padding="14dp"></EditText>
+
+        <RelativeLayout
+            android:id="@+id/relAdd"
+            android:layout_width="wrap_content"
+            android:background="@color/colorAccent"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_below="@id/textContentDescription"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:padding="10dp"></TextView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

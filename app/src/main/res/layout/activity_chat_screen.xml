@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayLightest"
+    tools:context=".ChatScreen">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="?attr/actionBarSize">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imgBtnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_chevron_left_24"
+                android:background="@null"
+                android:layout_centerVertical="true"></ImageButton>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circularImgUser"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/imgBtnBack"
+                android:src="@color/colorGray"></de.hdodenhof.circleimageview.CircleImageView>
+
+            <RelativeLayout
+                android:id="@+id/relProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:paddingEnd="20dp"
+                android:layout_toLeftOf="@id/imgBtnMore"
+                android:layout_toRightOf="@id/circularImgUser"
+                android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aryan Raj"
+                android:textSize="16sp"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/txtLastSeen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtUserName"
+                android:text="2 hrs ago"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="4dp"></TextView>
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/imgBtnMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_more_vert_24"
+                android:background="@null"
+                android:visibility="gone"
+                android:layout_marginEnd="4dp"
+                android:padding="12dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"></ImageButton>
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeTorefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/relFooter"
+        android:layout_below="@id/toolbar">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerChat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/relFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGrayLight"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
+            <ImageButton
+                android:id="@+id/imgBtnAttach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_photo_camera_24"
+                android:background="@null"
+                android:padding="12dp"></ImageButton>
+
+            <EditText
+                android:id="@+id/textMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_message_box"
+                android:padding="10dp"
+                android:hint="Start writing here..."
+                android:layout_toLeftOf="@id/imgBtnSend"
+                android:maxLines="3"
+                android:layout_marginEnd="6dp"
+                android:layout_toRightOf="@id/imgBtnAttach"
+                android:layout_marginStart="6dp"
+                android:layout_centerVertical="true"></EditText>
+
+            <ImageButton
+                android:id="@+id/imgBtnSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_send_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="12dp"
+                android:background="@null"></ImageButton>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

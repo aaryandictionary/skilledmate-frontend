@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Role"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:textSize="16sp"></TextView>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayLight"
+            android:layout_below="@id/tTitle"></View>
+
+        <RelativeLayout
+            android:id="@+id/relUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:layout_margin="10dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circularImgUser"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@color/colorBlack"></de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/circularImgUser"
+                android:text="Aryan Raj"
+                android:lines="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/txtCollege"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtName"
+                android:layout_marginTop="4dp"
+                android:lines="1"
+                android:text="Galgotia College of Engineering &amp; Techonology"
+                android:layout_toRightOf="@id/circularImgUser"
+                android:layout_marginStart="8dp"></TextView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linUserRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relUser"
+            android:weightSum="2"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:text="User Role"
+                android:gravity="center"></TextView>
+
+            <Spinner
+                android:id="@+id/spinnerUserRole"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="16dp"></Spinner>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/textRoleTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linUserRole"
+            android:background="@drawable/bg_edittext_gray"
+            android:padding="12dp"
+            android:hint="Role Title"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"></EditText>
+
+        <RelativeLayout
+            android:id="@+id/relAssignRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textRoleTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:background="@color/colorAccent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assign"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:padding="14dp"></TextView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

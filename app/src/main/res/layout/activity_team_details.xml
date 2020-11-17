@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TeamDetails">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relatd">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/relJoinContainer"
+        android:background="@color/colorGrayLightest">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+        <RelativeLayout
+            android:id="@+id/relTeamImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgTeam"
+                android:layout_width="match_parent"
+                android:src="@drawable/dummy_user4"
+                android:scaleType="centerCrop"
+                android:layout_height="200dp"></ImageView>
+        </RelativeLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Teams"
+                            android:visibility="gone"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorWhite"
+                            android:layout_centerVertical="true"
+                            android:textSize="16sp"></TextView>
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relTeamImage">
+
+            <RelativeLayout
+                android:id="@+id/relTeamName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:background="@color/colorGrayLightest">
+                <TextView
+                    android:id="@+id/txtTeamName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Team Name"
+                    android:layout_marginTop="4dp"
+                    android:maxLines="1"
+                    android:layout_marginEnd="8dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@id/relTools"
+                    android:textStyle="bold"
+                    android:textSize="18sp"></TextView>
+
+                <TextView
+                    android:id="@+id/txtFollowerCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23 Followers"
+                    android:layout_below="@id/relTools"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp"></TextView>
+                <TextView
+                    android:id="@+id/txtMembersCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23 Members"
+                    android:layout_below="@id/relTools"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp"></TextView>
+                <RelativeLayout
+                    android:id="@+id/relTools"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true">
+                    <ImageButton
+                        android:id="@+id/imgBtnEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_edit_24"
+                        android:background="@null"
+                        android:padding="6dp"></ImageButton>
+                    <ImageButton
+                        android:id="@+id/imgBtnShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/imgBtnEdit"
+                        android:background="@null"
+                        android:src="@drawable/ic_baseline_share_24"
+                        android:padding="6dp"></ImageButton>
+                </RelativeLayout>
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relTeamName"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/tA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Team"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"></TextView>
+
+            <TextView
+                android:id="@+id/txtAboutTeam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="It is a long established fact that a reader will be distted
+by the readable content of a page when looking at its
+layout. The point of using Lorem Ipsum is that it has a
+more-or-less normal distribution of letters, as opposed
+to using 'Content here, content here', making it look like
+readable English. Many desktop publishing packages
+and web page editors now use Lorem Ipsum as their
+default model text, and a search for 'lorem ipsum' will
+uncover many web sites still in their infancy. Various
+versions have evolved over the years, sometimes."
+                android:textSize="16sp"
+                android:layout_below="@id/tA"></TextView>
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relTeamAdmins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relAbout"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:id="@+id/tTA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Team Admins"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"></TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerTeamAdmins"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tTA"
+                    android:layout_marginTop="8dp"></androidx.recyclerview.widget.RecyclerView>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relTeamAdmins"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:id="@+id/tTP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Team Posts"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"></TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerTeamPosts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tTP"
+                    android:layout_marginTop="8dp"></androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+            </RelativeLayout>
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/relJoinContainer"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/relJoinNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join Now"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:layout_margin="14dp"
+            android:layout_centerInParent="true"></TextView>
+    </RelativeLayout></RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingAddInTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_add_24"
+        android:backgroundTint="@color/colorAccent"
+        app:tint="@color/colorWhite"
+        android:layout_above="@id/relJoinContainer"
+        app:backgroundTint="@color/colorAccent"
+        android:background="@color/colorAccent"
+        android:layout_margin="16dp"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:id="@+id/progress"></androidx.core.widget.ContentLoadingProgressBar>
+
+</RelativeLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateProfile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/imgBtnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_chevron_left_black"
+            android:background="@null"
+            android:padding="14dp"></ImageButton>
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Profile"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:textColor="@color/colorGrayDark"
+            android:textStyle="bold"></TextView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circularImageProfile"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/txtTitle"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/dummy_img"></de.hdodenhof.circleimageview.CircleImageView>
+
+        <RelativeLayout
+            android:id="@+id/relForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_below="@id/circularImageProfile"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp">
+
+            <RelativeLayout
+                android:id="@+id/relName"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_edittext_gray"
+                android:layout_marginTop="20dp"
+                android:layout_height="44dp">
+
+                <EditText
+                    android:id="@+id/textName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_edittext_gray"
+                    android:hint="Name"
+                    android:padding="10dp"></EditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relPhone"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_edittext_gray"
+                android:layout_below="@id/relName"
+                android:layout_marginTop="20dp"
+                android:layout_height="44dp">
+
+                <EditText
+                    android:id="@+id/textPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:enabled="false"
+                    android:background="@drawable/bg_edittext_gray"
+                    android:hint="Phone"
+                    android:padding="10dp"></EditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relEmail"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_edittext_gray"
+                android:layout_below="@id/relPhone"
+                android:layout_marginTop="20dp"
+                android:layout_height="44dp">
+
+                <EditText
+                    android:id="@+id/textEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_edittext_gray"
+                    android:hint="Email"
+                    android:padding="10dp"></EditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relCollege"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_edittext_gray"
+                android:layout_below="@id/relEmail"
+                android:layout_marginTop="20dp"
+                android:layout_height="44dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteCollege"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:lines="1"
+                    android:background="@drawable/bg_edittext_gray"
+                    android:maxLines="1"
+                    android:hint="College or University"
+                    android:padding="10dp"></AutoCompleteTextView>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_primary"
+                android:layout_below="@id/relCollege"
+                android:layout_marginTop="60dp"
+                android:minHeight="46dp"
+                android:text="SAVE"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"></Button>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

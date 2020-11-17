@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circularImgUser"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/dummy_img"></de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aryan Raj"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/circularImgUser"
+            android:layout_marginStart="8dp"></TextView>
+
+        <TextView
+            android:id="@+id/txtAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtName"
+            android:text="Galgotia College"
+            android:layout_toRightOf="@id/circularImgUser"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"
+            android:layout_marginTop="3dp"></TextView>
+
+        <TextView
+            android:id="@+id/txtDesignation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtAbout"
+            android:text="General Manager"
+            android:layout_toRightOf="@id/circularImgUser"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"></TextView>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/relMain"
+        android:background="@color/colorGrayLight"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"></View>
+
+</RelativeLayout>

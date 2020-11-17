@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circularImgUser"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/dummy_img"></de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/txtUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aryan Raj"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_toRightOf="@id/circularImgUser"
+            android:layout_marginStart="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/txtLastMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtUserName"
+            android:text="Hello Ping me at 5 Am. Good Morning"
+            android:layout_toRightOf="@id/circularImgUser"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/colorGray"
+            android:layout_marginStart="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/txtLastSeen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/txtLastMessage"
+            android:text="10:00 PM"
+            android:layout_marginEnd="8dp"></TextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayLight"
+            android:layout_below="@id/txtLastSeen"
+            android:layout_marginTop="16dp"></View>
+
+    </RelativeLayout>
+
+</RelativeLayout>

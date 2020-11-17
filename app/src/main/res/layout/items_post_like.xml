@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/relUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circularImgUser"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@color/colorGreen"></de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/txtUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aryan Raj"
+            android:layout_toLeftOf="@id/relBtnMessage"
+            android:layout_marginEnd="4dp"
+            android:textSize="16sp"
+            android:layout_toRightOf="@id/circularImgUser"
+            android:layout_marginStart="8dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/txtUserSkills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android Developer &amp; Designer"
+            android:layout_below="@id/txtUserName"
+            android:layout_toLeftOf="@id/relBtnMessage"
+            android:layout_marginEnd="4dp"
+            android:layout_toRightOf="@id/circularImgUser"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"></TextView>
+
+        <RelativeLayout
+            android:id="@+id/relBtnMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/bg_rounded_accent_btn">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Message"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"></TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

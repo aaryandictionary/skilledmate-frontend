@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayLightest"
+    tools:context=".UserProfile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relaup">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/relMessage">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/relHeader"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:layout_height="260dp">
+
+                    <ImageButton
+                        android:id="@+id/imgBtnBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_chevron_left_24"
+                        android:background="@null"
+                        android:padding="16dp"></ImageButton>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circularImageProfile"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/dummy_img"></de.hdodenhof.circleimageview.CircleImageView>
+
+                    <TextView
+                        android:id="@+id/txtUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aryan Raj"
+                        android:textColor="@color/colorWhite"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/circularImageProfile"
+                        android:layout_marginTop="4dp"></TextView>
+
+                    <TextView
+                        android:id="@+id/txtUserCollege"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Galgotia College Of Engineering &amp; Technology"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/colorWhite"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/txtUserName"></TextView>
+
+                    <TextView
+                        android:id="@+id/txtUserDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="This is a about me section and the user of app can write
+about himself in sort"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:textAlignment="center"
+                        android:layout_below="@id/txtUserCollege"></TextView>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/relSkills"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_below="@id/relHeader">
+
+                    <TextView
+                        android:id="@+id/tTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Skills &amp; Interests"
+                        android:textStyle="bold"></TextView>
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tTitle"
+                        android:layout_marginTop="10dp"></com.google.android.material.chip.ChipGroup>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/relProjects"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@id/relSkills">
+                    <TextView
+                        android:id="@+id/tPT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Teams"
+                        android:textStyle="bold"
+                        android:layout_margin="4dp"></TextView>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerTeams"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tPT"></androidx.recyclerview.widget.RecyclerView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relExpertise"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/relProjects"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tMET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Courses"
+                        android:textStyle="bold"
+                        android:layout_margin="4dp"></TextView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerCourses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tMET"
+                        android:layout_marginTop="4dp"></androidx.recyclerview.widget.RecyclerView>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/relMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="MESSAGE"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:layout_centerInParent="true"
+            android:padding="14dp"></TextView>
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_centerInParent="true"
+        android:id="@+id/progress"></androidx.core.widget.ContentLoadingProgressBar>
+
+</RelativeLayout>

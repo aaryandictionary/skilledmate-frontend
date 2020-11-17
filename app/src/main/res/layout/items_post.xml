@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="@color/colorGrayLighter"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:id="@+id/relUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_margin="8dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_user"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@color/colorBlack"></de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aryan Raj"
+            android:textColor="@color/colorGrayDark"
+            android:textStyle="bold"
+            android:layout_toLeftOf="@id/txtViewDetails"
+            android:textSize="16sp"
+            android:layout_toRightOf="@id/img_user"
+            android:layout_marginStart="6dp"></TextView>
+
+        <TextView
+            android:id="@+id/txtCollegeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Galgotia College of Engineering and Techonology"
+            android:layout_below="@id/txtName"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_marginEnd="6dp"
+            android:layout_toLeftOf="@id/txtViewDetails"
+            android:layout_toRightOf="@id/img_user"
+            android:layout_marginStart="6dp"></TextView>
+
+        <TextView
+            android:id="@+id/txtPostTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 hrs ago"
+            android:layout_toLeftOf="@id/txtViewDetails"
+            android:textColor="@color/colorGray"
+            android:layout_below="@id/txtCollegeName"
+            android:layout_toRightOf="@id/img_user"
+            android:layout_marginStart="6dp"></TextView>
+
+        <TextView
+            android:id="@+id/txtViewDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event Details >"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:textColor="@color/colorAccent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="4dp"></TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:minHeight="120dp"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:layout_below="@id/relUser">
+        <TextView
+            android:id="@+id/txtPostText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is a post which is just a test post. It is jjs jsjs shrebr hridod dkeowp dkdnendncjd ekjekjeowwo ekiendndd dkdjenememeic e eienmdndie edmdken idieie eiemendn"
+            android:layout_margin="6dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"></TextView>
+        <ImageView
+            android:id="@+id/imgPost"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/dummy_img"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="4dp"
+            android:layout_below="@id/txtPostText"></ImageView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtLiked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:visibility="gone"
+        android:text="Astha Bhatt, Anshu and 2 other liked"
+        android:textSize="12sp"
+        android:layout_below="@id/relPost"
+        android:layout_margin="8dp"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_below="@id/txtLiked"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/linLike"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/txtLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:text="2 Likes"
+                android:lines="1"
+                android:autoSizeMaxTextSize="14sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/ic_baseline_thumb_up_24"
+                android:drawablePadding="6dp"
+                android:textSize="14sp"
+                android:textStyle="bold"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linComment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/txtComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:text="12 Comments"
+                android:lines="1"
+                android:autoSizeMaxTextSize="14sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/ic_baseline_comment_24"
+                android:drawablePadding="6dp"
+                android:textSize="14sp"
+                android:textStyle="bold"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linShare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/txtShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:text="Share"
+                android:lines="1"
+                android:autoSizeMaxTextSize="14sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/ic_baseline_share_24"
+                android:drawablePadding="6dp"
+                android:textSize="14sp"
+                android:textStyle="bold"></TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

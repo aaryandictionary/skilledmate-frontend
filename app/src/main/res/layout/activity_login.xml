@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <RelativeLayout
+        android:id="@+id/relHeader"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter your Mobile Number"
+            android:textSize="20sp"
+            android:textColor="@color/colorGrayDark"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTitle"
+            android:text="One time password will be sent to your mobile
+number."
+            android:layout_marginTop="4dp"></TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_below="@id/relHeader">
+
+        <RelativeLayout
+            android:id="@+id/relMobile"
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_edittext_gray"
+            android:layout_height="44dp">
+            <RelativeLayout
+                android:id="@+id/relCountryCode"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_country_code">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+91"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorGrayDark"
+                    android:layout_centerInParent="true"
+                    android:textSize="16sp"></TextView>
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/textMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/relCountryCode"
+                android:paddingStart="10dp"
+                android:hint="9999999999"
+                android:maxLength="10"
+                android:digits="0123456789"
+                android:textSize="16sp"
+                android:inputType="phone"
+                android:layout_toLeftOf="@id/txtChange"
+                android:textColor="@color/colorGrayDark"
+                android:textStyle="bold"
+                android:background="@drawable/bg_edittext_gray"
+                android:layout_centerVertical="true"
+                android:padding="10dp"></EditText>
+
+            <TextView
+                android:id="@+id/txtChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:padding="10dp"></TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relOtp"
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_edittext_gray"
+            android:layout_below="@id/relMobile"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:layout_height="44dp">
+
+            <EditText
+                android:id="@+id/textOtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext_gray"
+                android:hint="OTP"
+                android:maxLength="6"
+                android:digits="0123456789"
+                android:inputType="phone"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:padding="10dp"></EditText>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtResendOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/relOtp"
+            android:layout_marginTop="40dp"
+            android:textSize="16sp"></TextView>
+    </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_below="@id/relForm"
+    android:layout_marginTop="36dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_height="46dp">
+
+
+    <RelativeLayout
+        android:id="@+id/relLoginButton"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@drawable/bg_btn_primary">
+        <TextView
+            android:id="@+id/txtButtonTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEND OTP"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"></TextView>
+
+
+        <ImageView
+            android:id="@+id/imgInButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_right_white"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"></ImageView>
+    </RelativeLayout>
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progress"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:visibility="gone"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_centerInParent="true"></androidx.core.widget.ContentLoadingProgressBar>
+
+</RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtTermsAndConditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terms &amp; Conditions"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:layout_marginBottom="6dp"></TextView>
+
+</RelativeLayout>

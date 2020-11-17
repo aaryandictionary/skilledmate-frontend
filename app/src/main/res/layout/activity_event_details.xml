@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventDetails">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relaed">
+
+    <RelativeLayout
+        android:id="@+id/relTeam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:layout_margin="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgTeam"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@color/colorBlack"></de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/txtTeamName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aryan Raj"
+            android:textColor="@color/colorGrayDark"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_toRightOf="@id/imgTeam"
+            android:layout_marginStart="6dp"></TextView>
+
+        <TextView
+            android:id="@+id/txtTeamTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Galgotia College of Engineering and Techonology"
+            android:layout_below="@id/txtTeamName"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_marginEnd="6dp"
+            android:layout_toRightOf="@id/imgTeam"
+            android:layout_marginStart="6dp"></TextView>
+
+        <TextView
+            android:id="@+id/txtPostTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 hrs ago"
+            android:textColor="@color/colorGray"
+            android:layout_below="@id/txtTeamTagline"
+            android:layout_toRightOf="@id/imgTeam"
+            android:layout_marginStart="6dp"></TextView>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relTeam"
+        android:layout_above="@id/relApplyEvent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/relEventDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imgEvent"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"></ImageView>
+
+                    <RelativeLayout
+                        android:id="@+id/relEventD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorGrayLightest"
+                        android:layout_below="@id/imgEvent">
+                        <TextView
+                            android:id="@+id/txtEventName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Event Title"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_margin="8dp"></TextView>
+                        <TextView
+                            android:id="@+id/txtParticipants"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:padding="8dp"
+                            android:textSize="16sp"
+                            android:text="23 Participants"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/txtEventTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtEventName"
+                            android:text="10:00 on 2 Nov'20"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:textColor="@color/colorLightBlue"></TextView>
+
+                        <TextView
+                            android:id="@+id/txtEventDeadline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtEventName"
+                            android:text="10:00 on 2 Nov'20"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:textColor="@color/colorRedDirty"></TextView>
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/relEventD"
+                        android:background="@color/colorGray"></View>
+
+                    <TextView
+                        android:id="@+id/txtEventTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_toLeftOf="@id/relTools"
+                        android:layout_below="@id/view1"
+                        android:text="This is title"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+
+                    <RelativeLayout
+                        android:id="@+id/relTools"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view1"
+                        android:layout_alignParentEnd="true">
+                        <ImageButton
+                            android:id="@+id/imgBtnEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_edit_24"
+                            android:background="@null"
+                            android:padding="10dp"></ImageButton>
+                        <ImageButton
+                            android:id="@+id/imgBtnShare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/imgBtnEdit"
+                            android:background="@null"
+                            android:src="@drawable/ic_baseline_share_24"
+                            android:padding="10dp"></ImageButton>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txtEventDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_margin="4dp"
+                        android:layout_below="@id/relTools"
+                        android:text="This is course description"></TextView>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </FrameLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relApplyEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Apply Event"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:layout_centerInParent="true"
+            android:padding="14dp"></TextView>
+    </RelativeLayout>
+    </RelativeLayout>
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:layout_width="wrap_content"
+        android:id="@+id/progress"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_centerInParent="true"></androidx.core.widget.ContentLoadingProgressBar>
+
+
+</RelativeLayout>

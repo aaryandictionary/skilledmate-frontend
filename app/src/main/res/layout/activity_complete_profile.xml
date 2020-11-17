@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompleteProfile">
+
+
+
+    <RelativeLayout
+        android:id="@+id/relForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp">
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complete your Profile"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:textColor="@color/colorGrayDark"
+            android:textStyle="bold"></TextView>
+
+        <RelativeLayout
+            android:id="@+id/relName"
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_edittext_gray"
+            android:layout_below="@id/txtTitle"
+            android:layout_marginTop="60dp"
+            android:layout_height="44dp">
+
+            <EditText
+                android:id="@+id/textName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_edittext_gray"
+                android:hint="Name"
+                android:padding="10dp"></EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relEmail"
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_edittext_gray"
+            android:layout_below="@id/relName"
+            android:layout_marginTop="20dp"
+            android:layout_height="44dp">
+
+            <EditText
+                android:id="@+id/textEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_edittext_gray"
+                android:hint="Email"
+                android:padding="10dp"></EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relCollege"
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_edittext_gray"
+            android:layout_below="@id/relEmail"
+            android:layout_marginTop="20dp"
+            android:layout_height="44dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteCollege"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:lines="1"
+                android:background="@drawable/bg_edittext_gray"
+                android:maxLines="1"
+                android:hint="College or University"
+                android:padding="10dp"></AutoCompleteTextView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="30dp"
+        android:layout_below="@id/relForm"
+        android:layout_height="wrap_content">
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_centerInParent="true"></androidx.core.widget.ContentLoadingProgressBar>
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn_primary"
+            android:layout_marginStart="32dp"
+            android:minHeight="46dp"
+            android:layout_marginEnd="32dp"
+            android:text="NEXT"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"></Button>
+    </RelativeLayout>
+
+
+</RelativeLayout>

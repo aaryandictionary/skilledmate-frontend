@@ -1,0 +1,54 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemeNoActionBar" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.WhiteAccent">
+        <item name="colorAccent">@color/colorWhite</item> <!-- Whatever color you want-->
+    </style>
+
+    <style name="MyButtonBlue" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/BlueButtonThemeOverlay</item>
+    </style>
+
+    <style name="MyButtonVoilet" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/VoiletButtonThemeOverlay</item>
+    </style>
+
+    <style name="MyButtonGreen" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/GreenButtonThemeOverlay</item>
+    </style>
+
+    <style name="MyButtonRed" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/RedButtonThemeOverlay</item>
+    </style>
+
+    <style name="BlueButtonThemeOverlay">
+        <item name="colorPrimary">#3651BC</item>
+    </style>
+
+    <style name="GreenButtonThemeOverlay">
+        <item name="colorPrimary">#0DC500</item>
+    </style>
+
+    <style name="VoiletButtonThemeOverlay">
+        <item name="colorPrimary">#BC36A1</item>
+    </style>
+
+    <style name="RedButtonThemeOverlay">
+        <item name="colorPrimary">#C53D00</item>
+    </style>
+
+</resources>

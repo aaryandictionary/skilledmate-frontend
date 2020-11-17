@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CourseDetails">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relacd">
+
+
+    <RelativeLayout
+        android:id="@+id/relUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:layout_margin="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_user"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@color/colorBlack"></de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aryan Raj"
+            android:textColor="@color/colorGrayDark"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_toRightOf="@id/img_user"
+            android:layout_marginStart="6dp"></TextView>
+
+        <TextView
+            android:id="@+id/txtCollegeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Galgotia College of Engineering and Techonology"
+            android:layout_below="@id/txtName"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_marginEnd="6dp"
+            android:layout_toRightOf="@id/img_user"
+            android:layout_marginStart="6dp"></TextView>
+
+        <TextView
+            android:id="@+id/txtPostTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 hrs ago"
+            android:textColor="@color/colorGray"
+            android:layout_below="@id/txtCollegeName"
+            android:layout_toRightOf="@id/img_user"
+            android:layout_marginStart="6dp"></TextView>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relUser"
+        android:layout_above="@id/relMessage">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relCourseDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgCourse"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"></ImageView>
+
+        <RelativeLayout
+            android:id="@+id/relHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGrayLightest"
+            android:layout_below="@id/imgCourse">
+            <TextView
+                android:id="@+id/txtCourseDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 Weeks"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_margin="4dp"></TextView>
+
+            <TextView
+                android:id="@+id/txtCoursePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs 40/hr"
+                android:textColor="@color/colorAccent"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="4dp"
+                android:textSize="16sp"
+                android:textStyle="bold"></TextView>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/txtCoursePrice"
+                android:layout_marginTop="6dp"
+                android:background="@color/colorGray"></View>
+
+            <TextView
+                android:id="@+id/txtCourseTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_below="@id/view1"
+                android:layout_toLeftOf="@id/relTools"
+                android:text="This is title"
+                android:textSize="20sp"
+                android:textStyle="bold"></TextView>
+
+            <RelativeLayout
+                android:id="@+id/relTools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view1"
+                android:layout_alignParentEnd="true">
+                <ImageButton
+                    android:id="@+id/imgBtnEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_edit_24"
+                    android:background="@null"
+                    android:padding="10dp"></ImageButton>
+                <ImageButton
+                    android:id="@+id/imgBtnShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/imgBtnEdit"
+                    android:background="@null"
+                    android:src="@drawable/ic_baseline_share_24"
+                    android:padding="10dp"></ImageButton>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/txtCourseDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="4dp"
+            android:layout_below="@id/relHead"
+            android:text="This is course description"></TextView>
+
+        <TextView
+            android:id="@+id/tCourseContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Course Content"
+            android:layout_below="@id/txtCourseDescription"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="4dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="4dp"></TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCourseContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tCourseContent"
+            android:layout_marginTop="8dp"></androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+    </RelativeLayout>
+    </FrameLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingAddContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_add_24"
+        android:backgroundTint="@color/colorAccent"
+        app:tint="@color/colorWhite"
+        android:layout_above="@id/relBottom"
+        app:backgroundTint="@color/colorAccent"
+        android:background="@color/colorAccent"
+        android:layout_margin="16dp"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <RelativeLayout
+        android:id="@+id/relBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+    <RelativeLayout
+        android:id="@+id/relMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="MESSAGE"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:layout_centerInParent="true"
+            android:padding="14dp"></TextView>
+    </RelativeLayout>
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_centerInParent="true"></androidx.core.widget.ContentLoadingProgressBar>
+
+
+</RelativeLayout>
